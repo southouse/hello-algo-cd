@@ -12,11 +12,11 @@ metadata:
 spec:
   rules:
   - http:
-    paths:
-    - path: /
-      pathType: Prefix
-      backend:
-        service:
-          name: bluegreen-demo-preview
-          port:
-            name: http
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: bluegreen-demo-preview
+            port:
+              name: http
