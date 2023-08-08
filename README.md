@@ -38,6 +38,7 @@ kubectl apply -n argo-rollouts \
 ```bash
 kubectl argo rollouts list rollouts # rollout 리스트
 kubectl argo rollouts get rollout ${rollout_name} # rollout 조회
+kubectl argo rollouts promote ${rollout_name} # 업그레이드 Blue -> Green
 ```
 
 ## EKS에서의 Fargate 환경
@@ -48,3 +49,7 @@ kubectl argo rollouts get rollout ${rollout_name} # rollout 조회
 - vCPU 및 메모리 조합을 지정하지 않으면 사용 가능한 가장 작은 조합(.25 vCPU 및 0.5GB 메모리)이 사용
 - vCPU와 메모리의 조합이 있기 때문에 둘 중 하나라도 조합을 넘으면 다음 상위 조합으로 사용
   - ex. 1vCPU, 9GB 메모리를 요청하면 자동으로 2vCPU, 9GB로 태스크를 생성
+
+# Reference
+- https://velog.io/@junsugi/Argo-CD-를-AWS-EKS-에-사용하기
+- https://gomgomshrimp.oopy.io/posts/2
