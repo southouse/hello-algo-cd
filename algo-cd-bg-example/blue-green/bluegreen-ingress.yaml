@@ -11,8 +11,7 @@ metadata:
     kubernetes.io/ingress.class: alb
 spec:
   rules:
-  - host: blue-green.dev.argoproj.io
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
